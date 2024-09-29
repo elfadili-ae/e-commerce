@@ -21,7 +21,7 @@ const HeaderComponent = ({ header }: { header: Header }) => {
     >
       <Gutter className={classes.wrap}>
         <Link className="logo" href="/">
-          <Image src="/pixel-pulse.svg" alt="pixel pulse logo" width={128} height={50} />
+          <Image src="/pixel-pulse-black.png" alt="pixel pulse logo" width={128} height={50} />
         </Link>
 
         <HeaderNav header={header} />
