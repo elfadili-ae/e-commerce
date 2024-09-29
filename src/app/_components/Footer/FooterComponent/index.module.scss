@@ -1,5 +1,9 @@
 @use '../../../_css/queries.scss' as *;
 
+.hide {
+    display: none;
+}
+
 .inclusions {
     display: grid;
     padding-top: 20px;
