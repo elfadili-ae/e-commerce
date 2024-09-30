@@ -1,5 +1,50 @@
 @import "../../_css/common";
 
 .recoverPassword {
-  margin-bottom: var(--block-padding);
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.leftContainer {
+  flex: 1;
+  padding: 20px;
+  background-image: url('/assets/bg/recover-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include small-break {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.rightContainer {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+
+.formWrap {
+  width: 80%;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+
+  @include extra-small-break {
+    width: 90%;
+  }
+}
+
+.logo {
+  width: fit-content;
 }
