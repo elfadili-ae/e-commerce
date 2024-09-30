@@ -7,6 +7,10 @@
   height: 100vh;
 }
 
+.params {
+  margin-top: var(--base);
+}
+
 .leftContainer {
   flex: 1;
   padding: 20px;
@@ -47,4 +51,10 @@
 
 .logo {
   width: fit-content;
+}
+
+.backLink {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
 }
