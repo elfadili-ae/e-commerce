@@ -1,9 +1,54 @@
 @import "../../_css/common";
 
 .login {
-  margin-bottom: var(--block-padding);
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 100vh;
 }
 
 .params {
   margin-top: var(--base);
+}
+
+.leftContainer {
+  flex: 1;
+  padding: 20px;
+  background-image: url('/assets/bg/login-bg.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include small-break {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.rightContainer {
+  position: relative;
+  z-index: 2;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+
+.logo {
+  width: fit-content;
+}
+
+.formWrap {
+  width: 80%;
+  background-color: white;
+  padding: 20px 40px;
+  border-radius: 12px;
+
+  @include extra-small-break {
+    width: 90%;
+  }
 }
