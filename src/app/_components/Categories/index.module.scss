@@ -2,6 +2,25 @@
 
 .categorySection {
     width: 100%;
+    margin-bottom: 22px;
+}
+
+.titleWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 22px 0;
+
+    a {
+        text-decoration: none;
+    }
+
+    @include extra-small-break {
+        h3 {
+            font-size: 20px;
+        }
+    }
 }
 
 .categories {
