@@ -1,0 +1,7 @@
+@use '../../_css/queries.scss' as *;
+
+.gutter {
+    @include extra-small-break {
+        padding: 8px;
+    }
+}

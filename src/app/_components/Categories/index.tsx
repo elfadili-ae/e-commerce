@@ -1,0 +1,23 @@
+import Link from 'next/link'
+import React from 'react'
+import { Category } from '../../../payload/payload-types'
+import CategoryCard from './CategoryCard'
+
+import classes from './index.module.scss'
+
+const Categories = ({ categories }: { categories: Category[] }) => {
+  return (
+    <section className={classes.categorySection}>
+      <h3>Shop by Categories</h3>
+      <Link href="/products">Show All</Link>
+
+      <div className={classes.categories}>
+        {categories.map(category => {
+          return <CategoryCard key={category.id} category={category} />
+        })}
+      </div>
+    </section>
+  )
+}
+
+export default Categories

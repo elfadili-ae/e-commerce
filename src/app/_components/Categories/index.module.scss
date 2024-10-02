@@ -1,0 +1,15 @@
+@use "../../_css/queries.scss" as *;
+
+.categorySection {
+    width: 100%;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+
+    @include small-break {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

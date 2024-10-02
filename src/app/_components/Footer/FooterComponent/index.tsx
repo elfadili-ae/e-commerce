@@ -14,12 +14,14 @@ import { usePathname } from 'next/navigation'
 const Footercomonent = ({ footer }: { footer: Footer }) => {
   const pathname = usePathname()
   return (
-    <footer className={noHeaderFooterUrls.includes(pathname) && classes.hide}>
+    <footer
+      className={[noHeaderFooterUrls.includes(pathname) && classes.hide].filter(Boolean).join('')}
+    >
       <Gutter>
         <ul className={classes.inclusions}>
-          {inclusions.map(inclusion => {
+          {inclusions.map((inclusion, index) => {
             return (
-              <li key={inclusion.title}>
+              <li key={`${inclusion.title}_${index}`}>
                 <Image src={inclusion.icon} alt={inclusion.title} width={64} height={64} />
                 <h5>{inclusion.title}</h5>
                 <p>{inclusion.description}</p>
