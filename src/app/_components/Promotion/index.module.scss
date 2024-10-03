@@ -1,0 +1,50 @@
+@use '../../_css/queries.scss' as *;
+
+.promotion {
+    width: 100%;
+    margin-top: 22px;
+}
+
+.textBox {
+    width: 66.66%;
+
+    @include small-break {
+        width: 80%;
+    }
+}
+
+.promoLimit {
+    width: 100%;
+    display: flex;
+    padding: 40px 0;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: var(--color-pink-500);
+
+    @include extra-small-break {
+        gap: 12px;
+    }
+    
+}
+
+.timer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 68px;
+    height: 68px;
+    
+    p {
+        font-size: 16px;
+    }
+    
+    @include extra-small-break {
+        width: 56px;
+        height: 56px;
+        
+        p {
+            font-size: 10px;
+        }
+    }
+}

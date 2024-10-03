@@ -1,0 +1,15 @@
+@use '../../../_css/queries.scss' as *;
+
+.categories {
+    padding-top: 12px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.hr {
+    @include small-break {
+        margin: 16px 0;
+    }
+}

@@ -1,0 +1,40 @@
+@use '../../_css/queries.scss' as *;
+
+.checkboxWrapper {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    
+    @include small-break {
+        label {
+            font-size: 12px;
+        }
+    }
+}
+
+.checkbox {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid var(--color-dark-500);
+    outline: none;
+    cursor: pointer;
+  }
+  
+  .checkbox:checked {
+    background-color: var(--color-dark-500);
+    position: relative;
+  }
+  
+  .checkbox:checked::before {
+    content: '\2713';
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    position: absolute;
+    right: 5px;
+    top: 0;
+  }
