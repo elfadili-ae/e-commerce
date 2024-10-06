@@ -2,12 +2,17 @@
 
 .productHero {
   display: flex;
-  gap: calc(var(--base) * 2);
+  gap: 28px;
 
   @include mid-break {
     flex-direction: column;
     gap: var(--base);
   }
+}
+
+.details {
+  width: 100%;
+  flex: 1;
 }
 
 .content {
@@ -25,7 +30,7 @@
 }
 
 .categories {
-  @extend %label;
+  font-size: 12px;
 }
 
 .title {
@@ -38,10 +43,11 @@
 
 .description {
   margin: 0;
+  margin-top: 12px;
 }
 
 .media {
-  width: 50%;
+  width: 100%;
 
   @include mid-break {
     width: 100%;
@@ -54,7 +60,10 @@
   position: relative;
   aspect-ratio: 5 / 4;
   margin-bottom: calc(var(--base) / 2);
-  width: calc(100% + calc(var(--gutter-h) / 2));
+  width: 40%;
+  // width: 100%;
+  background-color: var(--color-base-200);
+  padding: 24px;
 
   @include mid-break {
     margin-left: calc(var(--gutter-h) * -1);
@@ -63,7 +72,8 @@
 }
 
 .image {
-  object-fit: cover;
+  padding: 24px;
+  object-fit: contain;
 }
 
 .placeholder {
@@ -75,10 +85,26 @@
   justify-content: center;
 }
 
+.categoryWrapper {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 4px;
+}
+
+.instock {
+  margin-top: 12px;
+  color: green;
+  text-transform: uppercase;
+}
+
 .caption {
   color: var(--theme-elevation-500);
 }
 
 .addToCartButton {
+  width: 100%;
   margin-top: calc(var(--base) / 2);
 }

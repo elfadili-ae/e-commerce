@@ -1,7 +1,7 @@
 @import '../../_css/common';
 
 .introContent {
-  position: relative;
+  // position: relative;
   margin-bottom: calc(var(--base) * 2);
 
   @include mid-break {
@@ -11,48 +11,21 @@
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(3, minmax(30%, 1fr));
   width: 100%;
-  gap: var(--base) 40px;
+  gap: 30px;
 
   @include mid-break {
-    grid-template-columns: repeat(6, 1fr);
-    gap: calc(var(--base) / 2) var(--base);
-  }
-}
-
-.column {
-  grid-column-end: span 12;
-
-  @include mid-break {
-    grid-column-end: span 6;
+    grid-template-columns: repeat(2, 48%);
+    gap: 20px;
   }
 
   @include small-break {
-    grid-column-end: span 6;
+  grid-template-columns: 100%;
   }
 }
 
-.cols-half {
-  grid-column-end: span 6;
-
-  @include mid-break {
-    grid-column-end: span 6;
-  }
-
-  @include small-break {
-    grid-column-end: span 6;
-  }
-}
-
-.cols-thirds {
-  grid-column-end: span 3;
-
-  @include mid-break {
-    grid-column-end: span 6;
-  }
-
-  @include small-break {
-    grid-column-end: span 6;
-  }
+.title {
+  margin-top: 22px;
+  margin-bottom: 16px;
 }
