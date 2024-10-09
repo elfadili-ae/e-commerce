@@ -120,7 +120,10 @@ export const CheckoutPage: React.FC<{
             }
             return null
           })}
-          <div className={classes.orderTotal}>{`Order total: ${cartTotal.formatted}`}</div>
+          <div className={classes.orderTotal}>
+            <p>Order total:</p>
+            <p>{cartTotal.formatted}</p>
+          </div>
         </div>
       )}
       {!clientSecret && !error && (
