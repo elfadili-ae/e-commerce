@@ -1,7 +1,19 @@
 @import '../../../_css/common';
 
 .actions {
+  margin-top: 22px;
   display: flex;
   flex-wrap: wrap;
   gap: calc(var(--base) / 2);
+}
+
+.successful {
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.orderId {
+  font-weight: bold;
 }

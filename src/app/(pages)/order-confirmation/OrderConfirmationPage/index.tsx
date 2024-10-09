@@ -8,6 +8,7 @@ import { Message } from '../../../_components/Message'
 import { useCart } from '../../../_providers/Cart'
 
 import classes from './index.module.scss'
+import Image from 'next/image'
 
 export const OrderConfirmationPage: React.FC<{}> = () => {
   const searchParams = useSearchParams()
@@ -39,9 +40,18 @@ export const OrderConfirmationPage: React.FC<{}> = () => {
         </Fragment>
       ) : (
         <Fragment>
-          <h1>Thank you for your order!</h1>
+          <div className={classes.successful}>
+            <Image
+              src="/assets/icons/checkmark.svg"
+              alt="successful payment"
+              width={64}
+              height={64}
+            />
+            <h3>Thank you for your order!</h3>
+          </div>
+          <p>Your order has been confirmed.</p>
           <p>
-            {`Your order has been confirmed. You will receive an email confirmation shortly. Your order ID is ${orderID}.`}
+            Your order ID is <span className={classes.orderId}>{orderID}</span>
           </p>
           <div className={classes.actions}>
             <Button href={`/orders/${orderID}`} label="View order" appearance="primary" />
