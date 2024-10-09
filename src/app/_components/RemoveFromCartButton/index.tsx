@@ -4,6 +4,7 @@ import { Product } from '../../../payload/payload-types'
 import { useCart } from '../../_providers/Cart'
 
 import classes from './index.module.scss'
+import Image from 'next/image'
 
 export const RemoveFromCartButton: React.FC<{
   className?: string
@@ -20,14 +21,14 @@ export const RemoveFromCartButton: React.FC<{
   }
 
   return (
-    <button
-      type="button"
+    <Image
+      src="/assets/icons/delete.svg"
+      alt="Delete item"
+      width={20}
+      height={20}
       onClick={() => {
         deleteItemFromCart(product)
       }}
-      className={[className, classes.removeFromCartButton].filter(Boolean).join(' ')}
-    >
-      Remove
-    </button>
+    />
   )
 }

@@ -1,0 +1,79 @@
+@use '../../../../_css/queries.scss' as *;
+
+.cartItem {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    @include small-break {
+        gap: 12px;
+        width: 100%;
+    }
+}
+
+.mediaWrapper {
+    width: 64px;
+    height: 64px;
+}
+
+.media {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-color: var(--color-base-150);
+}
+
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 12px;
+}
+
+.titleWrapper {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.priceQtyWrapper {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+
+    @include small-break {
+        width: 100%;
+    }
+}
+
+.quantityWrapper {
+    display: flex;
+    align-items: center;
+    width: 124px;
+    height: 32px;
+    padding: 0 4px;
+    border: 1px solid var(--color-dark-500);
+    border-radius: 8px;
+
+    @include extra-small-break {
+        width: 100px;
+    }
+}
+
+.quantity {
+    flex: 1;
+    text-align: center;
+}
+
+.quantityBtn {
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
