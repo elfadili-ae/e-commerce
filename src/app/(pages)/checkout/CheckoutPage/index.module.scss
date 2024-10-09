@@ -1,6 +1,7 @@
 @import "../../../_css/common";
 
 .items {
+  width: 100%;
   margin-bottom: var(--base);
 }
 
@@ -78,4 +79,26 @@
 .loading,
 .error {
   margin-top: calc(var(--block-padding) - var(--base));
+}
+
+.headers {
+  display: flex;
+  width: 100%;
+
+  @include small-break {
+    display: none;
+  }
+}
+
+.product {
+  flex: 3;
+}
+
+.quantity {
+  flex: 1;
+}
+
+.price {
+  flex: 1;
+  text-align: end;
 }

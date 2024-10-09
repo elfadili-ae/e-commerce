@@ -1,0 +1,66 @@
+@use '../../../_css/queries.scss' as *;
+
+.checkoutItem {
+    display: flex;
+    gap: 12px;
+}
+
+.mediaWrapper {
+    width: 64px;
+    height: 64px;
+}
+
+.media {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+    background-color: var(--color-base-150);
+}
+
+.elements {
+    display: flex;
+    width: 100%;
+  
+    @include small-break {
+        flex-direction: column;
+    }
+  }
+  
+  .product {
+    flex: 3;
+    font-size: 12px;
+
+    @include small-break {
+        flex: 1;
+    }
+  }
+
+  .detailsWrapper {
+    flex: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include small-break {
+        justify-content: flex-start;
+        gap: 22px;
+    }
+  }
+  
+  .quantity {
+    flex: 1;
+
+    @include small-break {
+        flex: 0;
+    }
+  }
+  
+  .price {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+
+    @include small-break {
+        flex: 0;
+    }
+  }

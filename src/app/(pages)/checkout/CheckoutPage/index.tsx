@@ -19,6 +19,7 @@ import cssVariables from '../../../cssVariables'
 import { CheckoutForm } from '../CheckoutForm'
 
 import classes from './index.module.scss'
+import CheckoutItem from '../CheckoutItem'
 
 const apiKey = `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
 const stripe = loadStripe(apiKey)
@@ -93,8 +94,14 @@ export const CheckoutPage: React.FC<{
           )}
         </div>
       )}
+
       {!cartIsEmpty && (
         <div className={classes.items}>
+          <div className={classes.headers}>
+            <p className={classes.product}>Product</p>
+            <p className={classes.quantity}>Quantity</p>
+            <p className={classes.price}>Price</p>
+          </div>
           {cart?.items?.map((item, index) => {
             if (typeof item.product === 'object') {
               const {
@@ -109,39 +116,7 @@ export const CheckoutPage: React.FC<{
 
               const metaImage = meta?.image
 
-              return (
-                <Fragment key={index}>
-                  <div className={classes.row}>
-                    <div className={classes.mediaWrapper}>
-                      {!metaImage && <span className={classes.placeholder}>No image</span>}
-                      {metaImage && typeof metaImage !== 'string' && (
-                        <Media
-                          className={classes.media}
-                          imgClassName={classes.image}
-                          resource={metaImage}
-                          fill
-                        />
-                      )}
-                    </div>
-                    <div className={classes.rowContent}>
-                      {!stripeProductID && (
-                        <p className={classes.warning}>
-                          {'This product is not yet connected to Stripe. To link this product, '}
-                          <Link
-                            href={`${process.env.NEXT_PUBLIC_SERVER_URL}/admin/collections/products/${id}`}
-                          >
-                            edit this product in the admin panel
-                          </Link>
-                          {'.'}
-                        </p>
-                      )}
-                      <h6 className={classes.title}>{title}</h6>
-                      <Price product={product} button={false} quantity={quantity} />
-                    </div>
-                  </div>
-                  {!isLast && <HR />}
-                </Fragment>
-              )
+              return <CheckoutItem product={product} qty={quantity} metaImage={metaImage} />
             }
             return null
           })}
