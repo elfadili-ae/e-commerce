@@ -4,7 +4,6 @@ import React from 'react'
 
 import classes from './index.module.scss'
 import { Category, Media } from '../../../../payload/payload-types'
-import Image from 'next/image'
 import { useFilter } from '../../../_providers/Filter'
 
 const CategoryCard = ({ category }: { category: Category }) => {
@@ -16,7 +15,7 @@ const CategoryCard = ({ category }: { category: Category }) => {
       href="/products"
       style={{ backgroundImage: `url(${imageUrl.url})` }}
       onClick={() => {
-        setCategoryFilter[category.id]
+        setCategoryFilter([category.id])
       }}
     >
       <div className={classes.titleHolder}>
