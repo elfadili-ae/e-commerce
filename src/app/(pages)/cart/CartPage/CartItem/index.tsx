@@ -1,6 +1,5 @@
 'use client'
 import React, { useState } from 'react'
-import { update } from '@react-spring/web'
 import Link from 'next/link'
 
 import { Media } from '../../../../_components/Media'
