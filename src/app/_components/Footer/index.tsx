@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Footer } from '../../../payload/payload-types'
 import { fetchFooter } from '../../_api/fetchGlobals'
+
 import Footercomonent from './FooterComponent'
 
 export async function Footer() {

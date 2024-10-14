@@ -17,9 +17,9 @@ import { useCart } from '../../../_providers/Cart'
 import { useTheme } from '../../../_providers/Theme'
 import cssVariables from '../../../cssVariables'
 import { CheckoutForm } from '../CheckoutForm'
+import CheckoutItem from '../CheckoutItem'
 
 import classes from './index.module.scss'
-import CheckoutItem from '../CheckoutItem'
 
 const apiKey = `${process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY}`
 const stripe = loadStripe(apiKey)

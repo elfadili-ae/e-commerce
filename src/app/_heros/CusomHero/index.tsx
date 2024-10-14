@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react'
+import { url } from 'inspector'
 
 import { Page } from '../../../payload/payload-types'
 import { Gutter } from '../../_components/Gutter'
@@ -7,7 +8,6 @@ import { Media } from '../../_components/Media'
 import RichText from '../../_components/RichText'
 
 import classes from './index.module.scss'
-import { url } from 'inspector'
 
 export const CustomHero: React.FC<Page['hero']> = ({ richText, media, links }) => {
   const mediaUrl =

@@ -1,6 +1,7 @@
 'use client'
 
 import React, { Fragment, useEffect } from 'react'
+import Image from 'next/image'
 import { useSearchParams } from 'next/navigation'
 
 import { Button } from '../../../_components/Button'
@@ -8,7 +9,6 @@ import { Message } from '../../../_components/Message'
 import { useCart } from '../../../_providers/Cart'
 
 import classes from './index.module.scss'
-import Image from 'next/image'
 
 export const OrderConfirmationPage: React.FC<{}> = () => {
   const searchParams = useSearchParams()
